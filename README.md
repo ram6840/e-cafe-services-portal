@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Cafe Services Portal
+
+A modern, professional online services portal for printing and application filling services. Built with Next.js 16, React 19, and Tailwind CSS.
+
+## Features
+
+### 🏠 Homepage Sections
+- **Header**: Logo, shop name, address, contact info, and WhatsApp button
+- **Hero/Search Section**: Large search bar with quick service navigation buttons
+- **Services Section**: Grid layout showcasing all available services
+- **Order Your Prints**: Interactive file upload and price calculator
+- **Contact Section**: Contact information, Google Maps integration, and working hours
+- **Footer**: Links to all sections and services
+
+### 📄 Service Pages
+Each service has its own dedicated page:
+
+1. **Application Filling Services**
+   - `/services/application-filling` - Main application filling page
+   - `/services/tspsc` - TSPSC applications
+   - `/services/rrb` - Railway Recruitment Board applications
+   - `/services/ibps` - Banking Personnel Selection applications
+   - `/services/postal` - Postal department applications
+   - `/services/entrance-exams` - Entrance exam applications
+   - `/services/other-applications` - Other job applications
+
+2. **Printing Services**
+   - `/services/printing` - Printing services with order form
+
+3. **PVC Printing**
+   - `/services/pvc-printing` - PVC card printing services
+
+4. **Lamination**
+   - `/services/lamination` - Document lamination services
+
+5. **Binding**
+   - `/services/binding` - Document binding services
+
+## Project Structure
+
+```
+app/
+├── components/          # Reusable UI components
+│   ├── Header.tsx      # Site header with contact info
+│   ├── Hero.tsx        # Hero section with search
+│   ├── Services.tsx    # Services showcase section
+│   ├── OrderPrints.tsx # File upload and price calculator
+│   ├── Contact.tsx     # Contact section with map
+│   └── Footer.tsx      # Site footer
+├── services/           # Individual service pages
+│   ├── application-filling/
+│   ├── tspsc/
+│   ├── rrb/
+│   ├── ibps/
+│   ├── postal/
+│   ├── entrance-exams/
+│   ├── other-applications/
+│   ├── printing/
+│   ├── pvc-printing/
+│   ├── lamination/
+│   └── binding/
+├── page.tsx            # Homepage
+├── layout.tsx          # Root layout
+└── globals.css         # Global styles
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Update Contact Information
+Edit the following files to update contact details:
+- `app/components/Header.tsx` - Header contact info
+- `app/components/Contact.tsx` - Contact section
+- All service pages - Contact buttons
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Update Shop Information
+- Shop name and address: `app/components/Header.tsx`
+- Working hours: `app/components/Contact.tsx`
 
-## Deploy on Vercel
+### Update Google Maps
+Replace the iframe src in `app/components/Contact.tsx` with your location's Google Maps embed URL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Update Pricing
+- Printing prices: `app/components/OrderPrints.tsx`
+- Service descriptions: Individual service pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- **Next.js 16** - React framework
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **React Icons** - Icon library
+
+## Features Highlights
+
+✅ Responsive design (mobile, tablet, desktop)
+✅ Modern, clean UI/UX
+✅ Interactive price calculator
+✅ File upload functionality
+✅ Google Maps integration
+✅ WhatsApp integration
+✅ SEO-friendly structure
+✅ TypeScript for type safety
+✅ Component-based architecture
+
+## License
+
+This project is private and proprietary.

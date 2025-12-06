@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+  "dev": "next dev",
   "build": "next build",
-  "lint": "next lint",
-  "preview": "npx serve docs"
-  },
+  "lint": "next lint"
+},
   "dependencies": {
     "next": "16.0.7",
     "pdfjs-dist": "^5.4.449",

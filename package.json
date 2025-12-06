@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "next build && node -e \"require('fs').rmSync('docs', {recursive: true, force: true}); require('fs').renameSync('out', 'docs')\""
   },
   "dependencies": {
     "next": "16.0.7",

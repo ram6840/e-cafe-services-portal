@@ -178,12 +178,11 @@ export default function ApplicationDetailsPage() {
 
             {/* PDF Viewer */}
             <div className="flex-1 overflow-hidden bg-gray-900 min-h-0">
-              <iframe
-                src={`${encodeURI(application.officialNotificationDocument)}#toolbar=0`}
-                className="w-full h-full border-0"
-                title="Official Notification Document"
-                type="application/pdf"
-              ></iframe>
+                <iframe
+                  src={`${encodeURI(application.officialNotificationDocument)}#toolbar=0`}
+                  className="w-full h-full border-0"
+                  title="Official Notification Document"
+                ></iframe>
             </div>
           </div>
         </div>
